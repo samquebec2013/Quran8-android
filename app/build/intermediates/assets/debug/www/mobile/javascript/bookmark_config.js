@@ -691,6 +691,560 @@
     children: []
 }]
 },
+{
+    caption: "فهرس الأجزاء\t",
+    page: "2",
+    url: "",
+    level: "0",
+    children: [{
+    caption: "جزء-1 ",
+    page: "3",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption:  "جزء-2 ",
+    page: "20",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption:  "جزء-3 ",
+    page: "36",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-4 ",
+    page: "52",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "جزء-5 ",
+    page: "68",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-6 ",
+    page: "84",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-7 ",
+    page: "100",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-8 ",
+    page: "116",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-9 ",
+    page: "132",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-10 ",
+    page: "148",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "جزء-11 ",
+    page: "164",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "جزء-12 ",
+    page: "180",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-13 ",
+    page: "196",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-14 ",
+    page: "212",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "جزء-15 ",
+    page: "228",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "جزء-16 ",
+    page: "244",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-17 ",
+    page: "260",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-18 ",
+    page: "276",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-19 ",
+    page: "292",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-20 ",
+    page: "308",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-21 ",
+    page: "324",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-22 ",
+    page: "340",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-23 ",
+    page: "356",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-24 ",
+    page: "372",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "جزء-25 ",
+    page: "388",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-26 ",
+    page: "404",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-27 ",
+    page: "420",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-28 ",
+    page: "436",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-29 ",
+    page: "452",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "جزء-30 ",
+    page: "468",
+    url: "",
+    level: "0",
+    children: []
+}]
+},
+{
+    caption: "فهرس الأحزاب\t",
+    page: "2",
+    url: "",
+    level: "0",
+    children: [{
+    caption: "حزب-1 ",
+    page: "3",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-2 ",
+    page: "12",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-3 ",
+    page: "20",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-4 ",
+    page: "28",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-5 ",
+    page: "36",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-6 ",
+    page: "44",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-7 ",
+    page: "52",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-8 ",
+    page: "60",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-9 ",
+    page: "68",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-10 ",
+    page: "76",
+    url: "",
+    level: "0",
+    children: []
+}, {
+  caption: "حزب-11 ",
+    page: "84",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-12 ",
+    page: "92",
+    url: "",
+    level: "0",
+    children: []
+}, {
+  caption: "حزب-13 ",
+    page: "100",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-14 ",
+    page: "108",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-15 ",
+    page: "116",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-16 ",
+    page: "124",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-17 ",
+    page: "132",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-18 ",
+    page: "140",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-19 ",
+    page: "148",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-20 ",
+    page: "156",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-21 ",
+    page: "164",
+    url: "",
+    level: "0",
+    children: []
+}, {
+  caption: "حزب-22 ",
+    page: "172",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-23 ",
+    page: "180",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-24 ",
+    page: "188",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-25 ",
+    page: "196",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-26 ",
+    page: "204",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-27 ",
+    page: "212",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-28 ",
+    page: "220",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-29 ",
+    page: "228",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-30 ",
+    page: "236",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-31 ",
+    page: "244",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-32 ",
+    page: "252",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-33 ",
+    page: "260",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-34 ",
+    page: "268",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-35 ",
+    page: "276",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-36 ",
+    page: "284",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-37 ",
+    page: "292",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-38 ",
+    page: "300",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-39 ",
+    page: "308",
+    url: "",
+    level: "0",
+    children: []
+}, {
+     caption: "حزب-40 ",
+    page: "316",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-41 ",
+    page: "324",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-42 ",
+    page: "332",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-43 ",
+    page: "340",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-44 ",
+    page: "348",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-45 ",
+    page: "356",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-46 ",
+    page: "364",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-47 ",
+    page: "372",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-48 ",
+    page: "380",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-49 ",
+    page: "388",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-50 ",
+    page: "396",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-51 ",
+    page: "404",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-52 ",
+    page: "412",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-53 ",
+    page: "420",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-54 ",
+    page: "428",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-55 ",
+    page: "436",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-56 ",
+    page: "444",
+    url: "",
+    level: "0",
+    children: []
+}, {
+   caption: "حزب-57 ",
+    page: "452",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-58 ",
+    page: "460",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-59 ",
+    page: "468",
+    url: "",
+    level: "0",
+    children: []
+}, {
+    caption: "حزب-60 ",
+    page: "476",
+    url: "",
+    level: "0",
+    children: []
+}]
+},
 {caption:"سور وآيات فاضلة",page:"489",url:"",level:"1",children:[]},
 
 {caption:"دعاء ختم القرآن",page:"487",url:"",level:"1",children:[]},
