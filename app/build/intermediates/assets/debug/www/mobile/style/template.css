@@ -238,8 +238,8 @@
 .tableofcontent_form .progress{width:15px;height:5px;position:absolute;bottom:0;right:0;cursor:pointer;}
 .tableofcontent_form .progressBar{width:5px;height:5px;background:rgba(255,255,255,0.25);position:absolute;right:0;top:0;cursor:pointer;border-radius:2px;}
 
-.tableofcontent_form .item{padding:7px 12px;font-size:21px;cursor:pointer;margin-bottom:5px;position:relative;}
-.tableofcontent_form .item .arrow{padding:5px;position:absolute;top:7px;width:20px;height:20px;}
+.tableofcontent_form .item{padding:12px 15px;font-size:21px;cursor:pointer;margin-bottom:5px;position:relative;}
+.tableofcontent_form .item .arrow{padding:5px;position:absolute;top:13px;width:27px;height:27px;}
 .tableofcontent_form .item .description{padding:3px 0;display:inline-block;}
 .tableofcontent_form .item img{vertical-align:middle;}
 .tableofcontent_form .item:hover p{text-decoration:underline;}
