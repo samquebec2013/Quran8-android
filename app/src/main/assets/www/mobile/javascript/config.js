@@ -49,19 +49,19 @@ autoPlayDuration : ["autoPlayDuration"],
 autoPlayLoopCount : ["autoPlayLoopCount"],
 BookMarkButtonVisible : [],
 googleAnalyticsID : ["googleAnalyticsID"],
-OriginPageIndex : [],	
-HardPageEnable : ["isHardCover"],	
-UIBaseURL : [],	
-RightToLeft: ["isRightToLeft"],	
+OriginPageIndex : [],
+HardPageEnable : ["isHardCover"],
+UIBaseURL : [],
+RightToLeft: ["isRightToLeft"],
 
-LeftShadowWidth : ["leftPageShadowWidth"],	
+LeftShadowWidth : ["leftPageShadowWidth"],
 LeftShadowAlpha : ["pageShadowAlpha"],
 RightShadowWidth : ["rightPageShadowWidth"],
 RightShadowAlpha : ["pageShadowAlpha"],
-ShortcutButtonHeight : [],	
+ShortcutButtonHeight : [],
 ShortcutButtonWidth : [],
-AutoPlayButtonVisible : ["enableAutoPlay"],	
-DownloadButtonVisible : ["enableDownload"],	
+AutoPlayButtonVisible : ["enableAutoPlay"],
+DownloadButtonVisible : ["enableDownload"],
 DownloadURL : ["downloadURL"],
 HomeButtonVisible :["homeButtonVisible"],
 HomeURL:['btnHomeURL'],
@@ -99,7 +99,7 @@ btnTableOfContent:["btnBookMark"]
 	ToolBarsSettings:"",
 	TitleBar:"",
 	appLogoLinkURL:"",
-	bookTitle:"FLIPBUILDER",
+	bookTitle:"Quran8",
 	bookDescription:"",
 	ButtonsBar:"",
 	ShareButton:"",
@@ -141,7 +141,7 @@ btnTableOfContent:["btnBookMark"]
 	if(language&&language.length>0&&language[0]&&language[0].language){
 		bookConfig.language=language[0].language;
 	}
-	
+
 try{
 	for(var i=0;pageEditor!=undefined&&i<pageEditor.length;i++){
 		if(pageEditor[i].length==0){
