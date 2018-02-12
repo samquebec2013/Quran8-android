@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Feb 08 23:12:05 EST 2018
+#Sun Feb 11 23:56:10 EST 2018
 1073.file=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-land-xxhdpi-v4\\screen.png
 1090.base=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 1007.base=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\assets\\debug
