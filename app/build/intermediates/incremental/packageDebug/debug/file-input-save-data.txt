@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Feb 12 00:14:27 EST 2018
+#Fri Feb 23 01:36:25 EST 2018
 1073.file=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\files\\thumb\\272.jpg
 1090.base=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_
 1007.base=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\assets\\debug
