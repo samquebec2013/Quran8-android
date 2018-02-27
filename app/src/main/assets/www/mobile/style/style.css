@@ -3854,7 +3854,7 @@ a {
 .dockButton div{width:100%;height:100%;background:#333333;opacity:0.5;}
 .dockButton img{left:0;right:0;bottom:0;top:0;margin:auto;position:absolute;}
 
-.tipsBox{padding:13px 6px;background-color:#333333;opacity:0.5;display:none;width:100%;left:0;right:0;top:11px;margin:auto;z-index:110;position:absolute;font-size:15px;color:#f0f0f0;vertical-align:middle;text-align:center;}
+.tipsBox{padding:13px 6px;background-color:#333333;opacity:0.5;display:none;width:100%;left:0;right:0;top:11px;margin:auto;z-index:110;position:absolute;font-size:20px;color:#f0f0f0;vertical-align:middle;text-align:center;}
 .tipsBoxShadow{-webkit-box-shadow:0 0 15px rgba(40, 40, 40, 0.6);-moz-box-shadow:0 0 15px rgba(40, 40, 40, 0.6);-ms-box-shadow:0 0 15px rgba(40, 40, 40, 0.6);-o-box-shadow:0 0 15px rgba(40, 40, 40, 0.6);box-shadow:0 0 15px rgba(40, 40, 40, 0.6);}
 .tipsBoxRadius{-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;border-radius:3px;}		
 

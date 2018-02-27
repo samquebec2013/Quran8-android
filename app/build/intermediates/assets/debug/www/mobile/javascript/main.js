@@ -1,4 +1,7 @@
 (this || (0, eval)("(this)")).bdor = [];
+
+souarPages = [2,3,42,63,87,105,123,143,151,168,179,191,201,207,212,216,228,237,246,252,260,268,276,282,290,296,303,311,319,325,330,333,336,345,350,354,359,365,369,376,383,388,394,399,401,404,407,410,414,416,419,421,423,425,428,430,432,436,438,441,443,444,445,446,448,450,452,453,455,457,458,460,461,462,464,465,466,468,469,470,471,472,472,473,474,475,476,476,477,478,478,479,479,480,480,480,481,481,482,482,483,483,483,484,484,484,485,485,485,485,486,486,486,486] ;
+
 (function(b) {
     function c(b) {
         b = f.match(b);
@@ -7421,7 +7424,7 @@ var WebScheme = {
         bookConfig.AboutButtonIcon = getConfigValue("AboutButtonIcon", "");
         bookConfig.AutoPlayStartButtonIcon = getConfigValue("AutoPlayStartButtonIcon", "");
         bookConfig.AutoPlayStopButtonIcon =
-            getConfigValue("AutoPlayStopButtonIcon", "");
+         getConfigValue("AutoPlayStopButtonIcon", "");
         bookConfig.DownloadButtonIcon = getConfigValue("DownloadButtonIcon", "");
         bookConfig.searchTextJS = getConfigValue("searchTextJS", "files/search/book_config.js");
         bookConfig.searchPositionJS = getConfigValue("searchPositionJS", "files/search/text_position.js");
@@ -7450,10 +7453,10 @@ var WebScheme = {
         bookConfig.cornerRound = bookConfig.HardPageEnable ? Number.between(0, bookConfig.hardCoverBorderWidth, bookConfig.cornerRound) : 0;
         bookConfig.coverTexture = getConfigValue("coverTexture", "none");
         bookConfig.passwardPrompt = getConfigValue("passwardPrompt", "");
-        bookConfig.productName = getConfigValue("productName", "Flip HTML5");
-        bookConfig.homePage = getConfigValue("homePage", "http://www.fliphtml5.com");
-        global.productName = bookConfig.productName || "Flip HTML5";
-        global.homePage = bookConfig.homePage || "http://www.fliphtml5.com";
+        bookConfig.productName = getConfigValue("productName", "Quran");
+        bookConfig.homePage = getConfigValue("homePage", "http://www.quran8.org");
+        global.productName = bookConfig.productName || "Quran HTML5";
+        global.homePage = bookConfig.homePage || "http://www.quran8.org";
         bookConfig.backgroundPosition = getConfigValue("backgroundPosition", "Stretch");
         (isPhone() || isPad()) && "slide" != bookConfig.FlipStyle.toLowerCase() && (bookConfig.FlipStyle = "flip");
         if (isPhone() || isPad() || "catalog" == bookConfig.FlipStyle.toLowerCase() || "slide" == bookConfig.FlipStyle.toLowerCase() && "lite" == bookConfig.ToolbarViewMode.toLowerCase()) bookConfig.flipshortcutbutton = !1;
@@ -8055,13 +8058,83 @@ var changeShowBook = function(b) {
 
                     toolBar.showOrHide();
                     // window.alert();
+
                     global._tipsBox2 || (_tipsBox2 = new TipsBox1("TEST TEST", bookContainer));
                      if (_tipsBox2.visible) _tipsBox2.hideTipsBox();
-					_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex());
+
+                     var currentPage = parseInt(BookInfo.getBook().getCurrentPageIndex());
+                             					if ((currentPage==487)||(currentPage==488)){
+                             					             _tipsBox2.setCaption("دعاء ختم القرآن"); console.log("TEST دعاء ختم القرآن");
+                             					            }
+                             					 else {
+                             					        if (currentPage>=489 && currentPage<=541){_tipsBox2.setCaption("سور وآيات فاضلة"); console.log("TEST سور وآيات فاضلة");
+                                                                                           }
+                                                            else {
+                                                                  switch (currentPage) {
+                                                  					         case 1:
+                                                                              _tipsBox2.setCaption("المصحف الشريف برواية ورش عن نافع، مجزء إلى أثمان مع قواعد التجويد  ");
+                                                                               break;
+                                                                             case 2:
+                                                                               _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[0].caption);
+                                                                                break;
+
+                                                                             case 472:
+                                                                              _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" الإنفطار، المطففين ");
+                                                                              break;
+
+                                                                             case 476:
+                                                                              _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" الاعلى، الغاشية ");
+                                                                              break;
+                                                                             case 478:
+                                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  البلد، الشمس  ");
+                                                                             break;
+
+                                                                              case 479:
+                                                                                  _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الليل، الضحى  ");
+                                                                                  break;
+                                                                              case 480:
+                                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الشرح، التين، العلق  ");
+                                                                             break;
+                                                                                case 481:
+                                                                                _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  القدر، البينة  ");
+                                                                                break;
+                                                                              case 482:
+                                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الزلزلة، العاديات  ");
+                                                                             break;
+                                                                                case 483:
+                                                                                _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  القارعة، التكاثر، العصر  ");
+                                                                                                                                               break;
+                                                                                case 484:
+                                                                                 _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الهمزة، الفيل، قريش  ");
+                                                                                    break;
+                                                                            case 485:
+                                                                           _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الماعون، الكوثر، الكافرون، النصر ");
+                                                                              break;
+                                                                               case 486:
+                                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  المسد، الإخلاص، الفلق، الناس ");
+                                                                               break;
+                                                                             case currentPage>=486:
+                                                                             _tipsBox2.setCaption(" ");
+                                                                                break;
+                                                                               default:
+                                                                               for (var i = 1; i < 114; i++) { if (souarPages[i] <=parseInt(BookInfo.getBook().getCurrentPageIndex())&&((parseInt(BookInfo.getBook().getCurrentPageIndex())<souarPages[i+1]))){_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[i].caption); break}};
+                                                                               }
+
+                                                                               }
+
+
+
+                                                                      };
+
+
+
 					if (!_tipsBox2.visible) _tipsBox2.showTipsBox();
 					if (!toolBar.visible) _tipsBox2.hideTipsBox();
 
-					//_tipsBox1.hideTipsBox();
+
+
+
+
 
 
                 }
@@ -16392,6 +16465,7 @@ Class("BookmarkTab", {
         this.rightBar.css("display", "none")
     }
 });
+//ASC
 var TableOfContentElements = Class({
         create: function(b) {
             this._super(b);
@@ -16404,6 +16478,12 @@ var TableOfContentElements = Class({
             this.tableofcontentSwiper = $("<div class='stage'></div>");
             this.tableofcontentSwiperList = $("<div class='swiper'></div>");
             this.refreshSwiper(this.tableofcontentSwiperList, ols);
+
+
+            str = JSON.stringify(ols[0].children[0].caption);
+            console.log(str);
+
+
             this.tableofcontentSwiper.append(this.tableofcontentSwiperList);
             isPhone() || isPad() ? this.tableofcontentSwiper.css({
                     "overflow-y": "auto",
@@ -16481,6 +16561,9 @@ var TableOfContentElements = Class({
         },
         initEvent: function() {
             this.item.onTap(function() {
+            // ASC : Table of contents item.onTap
+            global._tipsBox2 || (_tipsBox2 = new TipsBox1("TEST TEST", bookContainer));
+            if (_tipsBox2.visible) _tipsBox2.hideTipsBox();
                 this.parm.url ? window.open(this.parm.url, "_blank") : (gotoPageFun(parseInt(this.parm.page)), (isPhone() || isPad()) && global.frmTableOfContent.hide())
             }.bind(this));
             this.item.bind("mouseover", function() {
@@ -40061,6 +40144,7 @@ var ZoomControlBar = Class({
         },
         destroy: function() {}
     }).extend(Book);
+
 SlideBook.expand({
     initEvent: function() {
         this.moveDirectionType = {
@@ -40111,9 +40195,80 @@ SlideBook.expand({
         }
         global._tipsBox2 || (_tipsBox2 = new TipsBox1("TEST TEST", bookContainer));
 
-        					_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex());
+        					//_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex());
+        					//_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+ols[0].children[0].caption);
+        					var currentPage = parseInt(BookInfo.getBook().getCurrentPageIndex());
+        					if ((currentPage==487)||(currentPage==488)){
+        					             _tipsBox2.setCaption("دعاء ختم القرآن"); console.log("TEST دعاء ختم القرآن");
+        					            }
+        					 else {
+        					        if (currentPage>=489 && currentPage<=541){_tipsBox2.setCaption("سور وآيات فاضلة"); console.log("TEST سور وآيات فاضلة");
+                                                                      }
+                                       else {
+                                             switch (currentPage) {
+                             					         case 1:
+                                                         _tipsBox2.setCaption("المصحف الشريف برواية ورش عن نافع، مجزء إلى أثمان مع قواعد التجويد  ");
+                                                          break;
+                                                        case 2:
+                                                          _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[0].caption);
+                                                           break;
+
+                                                        case 472:
+                                                         _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" الإنفطار، المطففين ");
+                                                         break;
+
+                                                        case 476:
+                                                         _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" الاعلى، الغاشية ");
+                                                         break;
+                                                        case 478:
+                                                        _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  البلد، الشمس  ");
+                                                        break;
+
+                                                         case 479:
+                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الليل، الضحى  ");
+                                                             break;
+                                                         case 480:
+                                                        _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الشرح، التين، العلق  ");
+                                                        break;
+                                                           case 481:
+                                                           _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  القدر، البينة  ");
+                                                           break;
+                                                         case 482:
+                                                        _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الزلزلة، العاديات  ");
+                                                        break;
+                                                           case 483:
+                                                           _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  القارعة، التكاثر، العصر  ");
+                                                                                                                          break;
+                                                           case 484:
+                                                            _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الهمزة، الفيل، قريش  ");
+                                                               break;
+                                                       case 485:
+                                                      _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الماعون، الكوثر، الكافرون، النصر ");
+                                                         break;
+                                                          case 486:
+                                                        _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  المسد، الإخلاص، الفلق، الناس ");
+                                                          break;
+                                                        case currentPage>=486:
+                                                        _tipsBox2.setCaption(" ");
+                                                           break;
+                                                          default:
+                                                          for (var i = 1; i < 114; i++) { if (souarPages[i] <=parseInt(BookInfo.getBook().getCurrentPageIndex())&&((parseInt(BookInfo.getBook().getCurrentPageIndex())<souarPages[i+1]))){_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[i].caption); break}};
+                                                          }
+
+                                                          }
+
+
+
+                                                 };
+                           //for (var i = 1; i < 114; i++) { if (souarPages[i] <=parseInt(BookInfo.getBook().getCurrentPageIndex())&&((parseInt(BookInfo.getBook().getCurrentPageIndex())<souarPages[i+1]))){_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[i].caption); break}};
+
+
+
+
         					if (!_tipsBox2.visible && toolBar.visible) _tipsBox2.showTipsBox();
         					if (!toolBar.visible) _tipsBox2.hideTipsBox();
+
+
     }
 });
 var DoubleSlideBook = Class({
@@ -41224,7 +41379,7 @@ function initSlideBook(b) {
         rightToLeft: rightToLeft
     }), (isPhone() || isPad()) && toolBar.hide()
 }
-
+// ASC Place where to add buttons function
 function initComponents() {
     if (isPhone() || isPad()) {
         bookConfig.SearchButtonVisible && (global.frmSearch = new PhoneSearchForm({
@@ -41232,6 +41387,7 @@ function initComponents() {
             formType: "search",
             rightToLeft: rightToLeft
         }));
+
         bookConfig.TableOfContentButtonVisible && (global.frmTableOfContent = new PhoneTableOfContentForm({
             parent: tmpContainer,
             formType: "tableOfContent",
