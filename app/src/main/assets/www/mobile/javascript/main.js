@@ -1,6 +1,8 @@
 (this || (0, eval)("(this)")).bdor = [];
 
 souarPages = [2,3,42,63,87,105,123,143,151,168,179,191,201,207,212,216,228,237,246,252,260,268,276,282,290,296,303,311,319,325,330,333,336,345,350,354,359,365,369,376,383,388,394,399,401,404,407,410,414,416,419,421,423,425,428,430,432,436,438,441,443,444,445,446,448,450,452,453,455,457,458,460,461,462,464,465,466,468,469,470,471,472,472,473,474,475,476,476,477,478,478,479,479,480,480,480,481,481,482,482,483,483,483,484,484,484,485,485,485,485,486,486,486,486] ;
+hizbPages  = [12,20,28,36,44,52,60,68,76,84,92,100,108,116,124,132,140,148,156,164,172,180,188,196,204,212,220,228,236,244,252,260,268,276,284,292,300,308,316,324,332,340,348,356,364,372,380,388,396,404,412,420,428,436,444,452,460,468,476];
+
 
 (function(b) {
     function c(b) {
@@ -8057,77 +8059,99 @@ var changeShowBook = function(b) {
                     if (global.foldingMenu && !0 == global.foldingMenu.visible) return;
 
                     toolBar.showOrHide();
-                    // window.alert();
+    // ASC Begin                    window.alert();
 
-                    global._tipsBox2 || (_tipsBox2 = new TipsBox1("TEST TEST", bookContainer));
+                    global._tipsBox2 || (_tipsBox2 = new TipsBox1("tipsBox1", bookContainer));
                      if (_tipsBox2.visible) _tipsBox2.hideTipsBox();
 
                      var currentPage = parseInt(BookInfo.getBook().getCurrentPageIndex());
-                             					if ((currentPage==487)||(currentPage==488)){
-                             					             _tipsBox2.setCaption("دعاء ختم القرآن"); console.log("TEST دعاء ختم القرآن");
-                             					            }
-                             					 else {
-                             					        if (currentPage>=489 && currentPage<=541){_tipsBox2.setCaption("سور وآيات فاضلة"); console.log("TEST سور وآيات فاضلة");
-                                                                                           }
-                                                            else {
-                                                                  switch (currentPage) {
-                                                  					         case 1:
-                                                                              _tipsBox2.setCaption("المصحف الشريف برواية ورش عن نافع، مجزء إلى أثمان مع قواعد التجويد  ");
-                                                                               break;
-                                                                             case 2:
-                                                                               _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[0].caption);
-                                                                                break;
 
-                                                                             case 472:
-                                                                              _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" الإنفطار، المطففين ");
-                                                                              break;
+        					//find sourah index
+        					function findFirstLargeNumber(element) {
+                              return element > currentPage;
+                            }
+                            souraIndexOfCurrentPage = souarPages.findIndex(findFirstLargeNumber)-1;
+                            if (souraIndexOfCurrentPage>=0) {var currentSoura = ols[0].children[souraIndexOfCurrentPage].caption};
 
-                                                                             case 476:
-                                                                              _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" الاعلى، الغاشية ");
-                                                                              break;
-                                                                             case 478:
-                                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  البلد، الشمس  ");
-                                                                             break;
+                            hizbIndexOfCurrentPage = hizbPages.findIndex(findFirstLargeNumber);
 
-                                                                              case 479:
-                                                                                  _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الليل، الضحى  ");
-                                                                                  break;
-                                                                              case 480:
-                                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الشرح، التين، العلق  ");
-                                                                             break;
-                                                                                case 481:
-                                                                                _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  القدر، البينة  ");
-                                                                                break;
-                                                                              case 482:
-                                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الزلزلة، العاديات  ");
-                                                                             break;
-                                                                                case 483:
-                                                                                _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  القارعة، التكاثر، العصر  ");
-                                                                                                                                               break;
-                                                                                case 484:
-                                                                                 _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الهمزة، الفيل، قريش  ");
-                                                                                    break;
-                                                                            case 485:
-                                                                           _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الماعون، الكوثر، الكافرون، النصر ");
-                                                                              break;
-                                                                               case 486:
-                                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  المسد، الإخلاص، الفلق، الناس ");
-                                                                               break;
-                                                                             case currentPage>=486:
-                                                                             _tipsBox2.setCaption(" ");
-                                                                                break;
-                                                                               default:
-                                                                               for (var i = 1; i < 114; i++) { if (souarPages[i] <=parseInt(BookInfo.getBook().getCurrentPageIndex())&&((parseInt(BookInfo.getBook().getCurrentPageIndex())<souarPages[i+1]))){_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[i].caption); break}};
-                                                                               }
+                            if (hizbIndexOfCurrentPage>=0){var currentHizb =ols[2].children[hizbIndexOfCurrentPage].caption};
 
-                                                                               }
+                            console.log('Soura'+currentSoura+',Hizb :'+hizbIndexOfCurrentPage);
 
 
+        					 if ((currentPage==487)||(currentPage==488)){_tipsBox2.setCaption("دعاء ختم القرآن") }
+        					 else {
+        					 if (currentPage>=489 && currentPage<=541){_tipsBox2.setCaption("سور وآيات فاضلة")}
+        					  else {
+        					         switch (currentPage) {
+                             					        case 1:
+                                                         _tipsBox2.setCaption("  المصحف الشريف برواية ورش عن نافع، مجزء إلى أثمان مع قواعد التجويد ");
+                                                          break;
+                                                        //case 2:
+                                                         // _tipsBox2.setCaption("\t"+"سورة الفاتحة"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                         // break;
 
-                                                                      };
+                                                        case 472:
+                                                        _tipsBox2.setCaption("\t"+"سورة الإنفطار، المطففين"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                         //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"سورة الإنفطار، المطففين");
+                                                         break;
+
+                                                        case 476:
+                                                        _tipsBox2.setCaption("\t"+"سورة الاعلى، الغاشية"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                        // _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" سورة الاعلى، الغاشية");
+                                                         break;
+                                                         case 477:
+                                                          _tipsBox2.setCaption("\t"+" سورة الفجر"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                           break;
+                                                        case 478:
+                                                        _tipsBox2.setCaption("\t"+" سورة البلد، الشمس"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                        //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة البلد، الشمس");
+                                                        break;
+
+
+                                                         case 479:
+                                                         _tipsBox2.setCaption("\t"+" سورة الليل، الضحى"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                             //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"سورة الليل، الضحى");
+                                                             break;
+                                                         case 480:
+                                                         _tipsBox2.setCaption("\t"+" سورة الشرح، التين، العلق"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                        //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة الشرح، التين، العلق");
+                                                        break;
+                                                           case 481:
+                                                           _tipsBox2.setCaption("\t"+" سورة القدر، البينة"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                           //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة القدر، البينة");
+                                                           break;
+                                                         case 482:
+                                                         _tipsBox2.setCaption("\t"+" سورة الزلزلة، العاديات"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                        //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة الزلزلة، العاديات");
+                                                        break;
+                                                           case 483:
+                                                           _tipsBox2.setCaption("\t"+" سورة القارعة، التكاثر، العصر"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                           //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة القارعة، التكاثر، العصر");
+                                                              break;
+                                                           case 484:
+                                                           _tipsBox2.setCaption("\t"+" سورة الهمزة، الفيل، قريش"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                            //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة الهمزة، الفيل، قريش");
+                                                               break;
+                                                       case 485:
+                                                       _tipsBox2.setCaption("\t"+" سورة الماعون، الكوثر، الكافرون، النصر"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                      //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة الماعون، الكوثر، الكافرون، النصر");
+                                                         break;
+                                                          case 486:
+                                                          _tipsBox2.setCaption("\t"+" سورة المسد، الإخلاص، الفلق، الناس"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                           break;
+
+                                                          default:
+                                                          _tipsBox2.setCaption(BookInfo.getBook().getCurrentPageIndex()+"\t"+"سورة"+"\t"+currentSoura+"\t" +"-"+"\t" +currentHizb+"-"+"\t"+"صفحة"+"\t");
 
 
 
+
+                                                          }
+
+                                    }
+                                   }
 					if (!_tipsBox2.visible) _tipsBox2.showTipsBox();
 					if (!toolBar.visible) _tipsBox2.hideTipsBox();
 
@@ -8469,7 +8493,7 @@ var nextPageFun = function() {
         gotoPageFun(originTotalPageCount)
     },
 
-	// ASC  PageTitle    page Current number     BookInfo.getBook().getCurrentPageIndex()
+	//  PageTitle    page Current number     BookInfo.getBook().getCurrentPageIndex()
 	PageTitle = function(b, c) {
         if (!isNaN(b))
             if (statisticalData(1, b), b = parseInt(b), 1 > b || b > bookConfig.totalPageCount) {
@@ -16480,8 +16504,8 @@ var TableOfContentElements = Class({
             this.refreshSwiper(this.tableofcontentSwiperList, ols);
 
 
-            str = JSON.stringify(ols[0].children[0].caption);
-            console.log(str);
+           //ASC test :      str = JSON.stringify(ols[0].children[0].caption);
+           //                    console.log(str);
 
 
             this.tableofcontentSwiper.append(this.tableofcontentSwiperList);
@@ -16561,9 +16585,11 @@ var TableOfContentElements = Class({
         },
         initEvent: function() {
             this.item.onTap(function() {
-            // ASC : Table of contents item.onTap
+            // ASC : Begin Table of contents item.onTap close hideTipsBox
             global._tipsBox2 || (_tipsBox2 = new TipsBox1("TEST TEST", bookContainer));
+
             if (_tipsBox2.visible) _tipsBox2.hideTipsBox();
+            //ASC : End
                 this.parm.url ? window.open(this.parm.url, "_blank") : (gotoPageFun(parseInt(this.parm.page)), (isPhone() || isPad()) && global.frmTableOfContent.hide())
             }.bind(this));
             this.item.bind("mouseover", function() {
@@ -36330,12 +36356,19 @@ var Book = Class({
             }.bind(this)))
         }
     }),
+
         TipsBox1 = Class({
             create: function(b, c) {
                 this.visible = !1;
                 this.caption = b;
                 this.background = $("<div class='tipsBox tipsBoxShadow tipsBoxRadius'></div>");
-                $(c).append(this.background)
+                                 // d = ["left", "top"];
+                                //$(this.background).css(d[0], 10 + "px");
+                                // $(this.background).css(d[1], 20 + "px");
+
+                $(c).append(this.background);
+
+
             },
             setTimer: function() {
                 this.timer = window.setInterval(function() {
@@ -36375,6 +36408,8 @@ var Book = Class({
                 }.bind(this)))
             }
         }),
+
+
     BookMiniFullscreen = Class({
         create: function() {},
         init: function() {
@@ -40193,82 +40228,105 @@ SlideBook.expand({
             d = 30 * this.width / 1600;
             Math.abs(b) <= d || (b < -d ? rightToLeft ? previousPageFun() : nextPageFun() : b > d && (rightToLeft ? nextPageFun() : previousPageFun()))
         }
-        global._tipsBox2 || (_tipsBox2 = new TipsBox1("TEST TEST", bookContainer));
+        // ASC Begin
+        global._tipsBox2 || (_tipsBox2 = new TipsBox1("tipsBox1", bookContainer));
 
-        					//_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex());
-        					//_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+ols[0].children[0].caption);
+
         					var currentPage = parseInt(BookInfo.getBook().getCurrentPageIndex());
-        					if ((currentPage==487)||(currentPage==488)){
-        					             _tipsBox2.setCaption("دعاء ختم القرآن"); console.log("TEST دعاء ختم القرآن");
-        					            }
+
+        					//find sourah index
+        					function findFirstLargeNumber(element) {
+                              return element > currentPage;
+                            }
+                            souraIndexOfCurrentPage = souarPages.findIndex(findFirstLargeNumber)-1;
+                            if (souraIndexOfCurrentPage>=0) {var currentSoura = ols[0].children[souraIndexOfCurrentPage].caption};
+
+                            hizbIndexOfCurrentPage = hizbPages.findIndex(findFirstLargeNumber);
+
+                            if (hizbIndexOfCurrentPage>=0){var currentHizb =ols[2].children[hizbIndexOfCurrentPage].caption};
+
+                            console.log('Soura'+currentSoura+',Hizb :'+hizbIndexOfCurrentPage);
+
+
+        					 if ((currentPage==487)||(currentPage==488)){_tipsBox2.setCaption("دعاء ختم القرآن") }
         					 else {
-        					        if (currentPage>=489 && currentPage<=541){_tipsBox2.setCaption("سور وآيات فاضلة"); console.log("TEST سور وآيات فاضلة");
-                                                                      }
-                                       else {
-                                             switch (currentPage) {
-                             					         case 1:
-                                                         _tipsBox2.setCaption("المصحف الشريف برواية ورش عن نافع، مجزء إلى أثمان مع قواعد التجويد  ");
+        					 if (currentPage>=489 && currentPage<=541){_tipsBox2.setCaption("سور وآيات فاضلة")}
+        					  else {
+        					         switch (currentPage) {
+                             					        case 1:
+                                                         _tipsBox2.setCaption("  المصحف الشريف برواية ورش عن نافع، مجزء إلى أثمان مع قواعد التجويد ");
                                                           break;
-                                                        case 2:
-                                                          _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[0].caption);
-                                                           break;
+                                                        //case 2:
+                                                         // _tipsBox2.setCaption("\t"+"سورة الفاتحة"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                         // break;
 
                                                         case 472:
-                                                         _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" الإنفطار، المطففين ");
+                                                        _tipsBox2.setCaption("\t"+"سورة الإنفطار، المطففين"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                         //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"سورة الإنفطار، المطففين");
                                                          break;
 
                                                         case 476:
-                                                         _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" الاعلى، الغاشية ");
+                                                        _tipsBox2.setCaption("\t"+"سورة الاعلى، الغاشية"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                        // _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" سورة الاعلى، الغاشية");
+                                                         break;
+
+                                                         case 477:
+                                                         _tipsBox2.setCaption("\t"+" سورة الفجر"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
                                                          break;
                                                         case 478:
-                                                        _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  البلد، الشمس  ");
+                                                        _tipsBox2.setCaption("\t"+" سورة البلد، الشمس"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                        //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة البلد، الشمس");
                                                         break;
 
                                                          case 479:
-                                                             _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الليل، الضحى  ");
+                                                         _tipsBox2.setCaption("\t"+" سورة الليل، الضحى"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                             //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"سورة الليل، الضحى");
                                                              break;
                                                          case 480:
-                                                        _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الشرح، التين، العلق  ");
+                                                         _tipsBox2.setCaption("\t"+" سورة الشرح، التين، العلق"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                        //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة الشرح، التين، العلق");
                                                         break;
                                                            case 481:
-                                                           _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  القدر، البينة  ");
+                                                           _tipsBox2.setCaption("\t"+" سورة القدر، البينة"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                           //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة القدر، البينة");
                                                            break;
                                                          case 482:
-                                                        _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الزلزلة، العاديات  ");
+                                                         _tipsBox2.setCaption("\t"+" سورة الزلزلة، العاديات"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                        //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة الزلزلة، العاديات");
                                                         break;
                                                            case 483:
-                                                           _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  القارعة، التكاثر، العصر  ");
-                                                                                                                          break;
+                                                           _tipsBox2.setCaption("\t"+" سورة القارعة، التكاثر، العصر"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                           //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة القارعة، التكاثر، العصر");
+                                                              break;
                                                            case 484:
-                                                            _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الهمزة، الفيل، قريش  ");
+                                                           _tipsBox2.setCaption("\t"+" سورة الهمزة، الفيل، قريش"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                            //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة الهمزة، الفيل، قريش");
                                                                break;
                                                        case 485:
-                                                      _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  الماعون، الكوثر، الكافرون، النصر ");
+                                                       _tipsBox2.setCaption("\t"+" سورة الماعون، الكوثر، الكافرون، النصر"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
+                                                      //_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  سورة الماعون، الكوثر، الكافرون، النصر");
                                                          break;
                                                           case 486:
-                                                        _tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+"  المسد، الإخلاص، الفلق، الناس ");
-                                                          break;
-                                                        case currentPage>=486:
-                                                        _tipsBox2.setCaption(" ");
+                                                          _tipsBox2.setCaption("\t"+" سورة المسد، الإخلاص، الفلق، الناس"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor((currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
                                                            break;
+
                                                           default:
-                                                          for (var i = 1; i < 114; i++) { if (souarPages[i] <=parseInt(BookInfo.getBook().getCurrentPageIndex())&&((parseInt(BookInfo.getBook().getCurrentPageIndex())<souarPages[i+1]))){_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[i].caption); break}};
-                                                          }
+                                                          _tipsBox2.setCaption(BookInfo.getBook().getCurrentPageIndex()+"\t"+"سورة"+"\t"+currentSoura+"\t" +"-"+"\t" +currentHizb+"-"+"\t"+"صفحة"+"\t");
+
+
+
 
                                                           }
 
-
-
-                                                 };
-                           //for (var i = 1; i < 114; i++) { if (souarPages[i] <=parseInt(BookInfo.getBook().getCurrentPageIndex())&&((parseInt(BookInfo.getBook().getCurrentPageIndex())<souarPages[i+1]))){_tipsBox2.setCaption("page "+BookInfo.getBook().getCurrentPageIndex()+" "+ols[0].children[i].caption); break}};
-
-
+                                    }
+                                   }
 
 
         					if (!_tipsBox2.visible && toolBar.visible) _tipsBox2.showTipsBox();
         					if (!toolBar.visible) _tipsBox2.hideTipsBox();
 
 
+        // ASC END
     }
 });
 var DoubleSlideBook = Class({
