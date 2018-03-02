@@ -24,8 +24,7 @@
         android:hardwareAccelerated="true"
         android:icon="@mipmap/icon"
         android:label="Quran Athman"
-        android:supportsRtl="true"
-        android:testOnly="true" >
+        android:supportsRtl="true" >
         <activity
             android:name="com.quran8.app1.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
