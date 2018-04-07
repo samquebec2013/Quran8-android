@@ -19775,9 +19775,7 @@ Class("ExecuteJavascriptAction", {
     Package: "PageItem.Action",
     execute: function(b, c, d) {
         b = d.action;
-        var image3 = new Image();
-        image3.src = "https://dummyimage.com/300x300/000/fff.jpg";
-        document.images.slide.src=eval("image3.src");
+
         b.scriptFun && eval(b.scriptFun);
         c.addClass("slider-action")
     }
