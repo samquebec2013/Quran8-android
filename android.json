@@ -19,7 +19,7 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.quran8.app1"
+      "PACKAGE_NAME": "com.quran8.app"
     }
   },
   "dependent_plugins": {},

@@ -4,6 +4,18 @@ souarPages = [2,3,42,63,87,105,123,143,151,168,179,191,201,207,212,216,228,237,2
 hizbPages  = [12,20,28,36,44,52,60,68,76,84,92,100,108,116,124,132,140,148,156,164,172,180,188,196,204,212,220,228,236,244,252,260,268,276,284,292,300,308,316,324,332,340,348,356,364,372,380,388,396,404,412,420,428,436,444,452,460,468,476];
 
 
+function selected_language() {
+
+                switch (getLanguage("frmToc", "Table of Contents")){
+                    case "Table Of Contents":
+                        return "English";
+                    case "جدول المحتوى":
+                        return "Arabic";
+                    case "Table des matières":
+                        return "French"
+                        }
+                            }
+
 (function(b) {
     function c(b) {
         b = f.match(b);
@@ -6290,6 +6302,7 @@ function searchFromPages(b, c) {
             t;
         for (t = 0; t < f.length; t++)
             if (f[t]) {
+            //call Knuth–Morris–Pratt string searching algorithm
                 var k = new KMP(k, f[t]),
                     r = f[t].length;
                 if (k.match()) {
@@ -6304,10 +6317,21 @@ function searchFromPages(b, c) {
                     break
                 }
             }
-        q && (n = [], n.search_page = g + 1, n.search_title = "page " + (g + 1), l = h.substring(0, l).lastIndexOf("."), -1 == l ? l = 0 : l++, p = h.substring(m), q = p.indexOf(".") + 1, q = -1 == q ? p.length() : m + q, h = h.substring(l, q), n.search_text = h, d.push(n))
+        q && (n = [],
+                n.search_page = g + 1,
+                n.search_title = "page " + (g + 1),
+                l = h.substring(0, l).lastIndexOf("."),
+                -1 == l ? l = 0 : l++,
+                p = h.substring(m),
+                q = p.indexOf(".") + 1,
+                q = -1 == q ? p.length() : m + q, h = h.substring(l, q),
+                n.search_text = h,
+                 d.push(n))
     }
     return d
 }
+
+//Knuth–Morris–Pratt string searching algorithm
 var KMP = function(b, c) {
     this.__string = b;
     this.__pattern = c;
@@ -8080,9 +8104,9 @@ var changeShowBook = function(b) {
                             console.log('Soura'+currentSoura+',Hizb :'+hizbIndexOfCurrentPage);
 
 
-        					 if ((currentPage==487)||(currentPage==488)){_tipsBox2.setCaption("دعاء ختم القرآن") }
+        					 if ((currentPage==487)||(currentPage==488)||(currentPage==489)){_tipsBox2.setCaption("دعاء ختم القرآن") }
         					 else {
-        					 if (currentPage>=489 && currentPage<=541){_tipsBox2.setCaption("سور وآيات فاضلة")}
+        					 if (currentPage>=490 && currentPage<=542){_tipsBox2.setCaption("سور وآيات فاضلة")}
         					  else {
         					         switch (currentPage) {
                              					        case 1:
@@ -8091,6 +8115,19 @@ var changeShowBook = function(b) {
                                                         //case 2:
                                                          // _tipsBox2.setCaption("\t"+"سورة الفاتحة"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
                                                          // break;
+                                                           case 543:  _tipsBox2.setCaption("   ");break;
+                                                           case 544:
+                                                          _tipsBox2.setCaption("   ");
+                                                           break;
+                                                           case 545:  _tipsBox2.setCaption("   ");break;
+                                                           case 546:  _tipsBox2.setCaption("   ");break;
+                                                           case 547:  _tipsBox2.setCaption("   ");break;
+                                                           case 548:  _tipsBox2.setCaption("   ");break;
+                                                           case 549:  _tipsBox2.setCaption("   ");break;
+                                                           case 550:  _tipsBox2.setCaption("   ");break;
+                                                           case 551:  _tipsBox2.setCaption("   ");break;
+                                                           case 552:  _tipsBox2.setCaption("   ");break;
+                                                           case 553:  _tipsBox2.setCaption("   ");break;
 
                                                         case 472:
                                                         _tipsBox2.setCaption("\t"+"سورة الإنفطار، المطففين"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
@@ -8236,8 +8273,7 @@ var changeLanguage = function(b) {
         global.videoGallery && videoGallery.changeLanguage();
         global.photoGallery && photoGallery.changeLanguage();
         global.bookmark && bookmark.changeLanguage();
-        global.frmTableOfContent &&
-            frmTableOfContent.changeLanguage();
+        global.frmTableOfContent && frmTableOfContent.changeLanguage();
         global.frmSearch && frmSearch.changeLanguage();
         global.bookInstructions && global.bookInstructions.changeLanguage && global.bookInstructions.changeLanguage()
     },
@@ -8660,7 +8696,7 @@ var FormElements = Class({
                     case "help":
                         return getLanguage("btnHelp", "Help");
                     case "language":
-                        return getLanguage("btnLanguage", "Language change");
+                          return getLanguage("btnLanguage", "Language change");
                     case "print":
                         return getLanguage("frmPrintCaption", "Print");
                     case "search":
@@ -8669,7 +8705,9 @@ var FormElements = Class({
                         return getLanguage("btnSettings", "Settings");
                     case "share":
                         return getLanguage("frmShareCaption", "Share");
-                    case "tableofcontent":
+                        // ASC Language
+                    case "tableofcontent":  //window.alert(selected_language(getLanguage("frmToc", "Table of Contents")))
+
                         return getLanguage("frmToc", "Table of Contents");
                     case "videogallery":
                         return getLanguage("frmVideoTitle", "Video")
@@ -8718,9 +8756,19 @@ var FormElements = Class({
         },
         onResize: function() {},
         destroy: function() {},
+
+        //ASC: Language
         changeLanguage: function() {
             this.elements && this.elements.changeLanguage();
-            this.title && this.title.find("span").html(FormInfo.getFormTitle(this.formType))
+            //global.frmTableOfContent.elements.initElements(ols1);
+            //global.frmTableOfContent.elements.prototype.ols0=ols1
+
+
+            this.title && this.title.find("span").html(FormInfo.getFormTitle(this.formType));
+            //window.alert(FormInfo.getFormTitle(this.formType));
+
+
+
         }
     }),
     PhoneFormFrame = Class({
@@ -9586,15 +9634,18 @@ var highlightSearchFun = function(b, c) {
     }).extend(PhoneFormFrame),
     LanguageElements = Class({
         create: function(b) {
+
             this._super(b);
             this.initElements();
             this.initEvent(b);
             this.pickElements(b)
+
         },
+        //ASC :
         initElements: function() {
             this.choosedUrl = uiBaseURL + "choosed.png";
             this.itemArray = [];
-            this.scrollBox = $("<div class='scrollBox'></div>");
+            this.scrollBox = $("<div class='scrollBox'></div> ");
             for (var b = 0; b < language.length; b++) language[b] && language[b].language && this.addItem(language[b].language)
         },
         addItem: function(b) {
@@ -16489,33 +16540,44 @@ Class("BookmarkTab", {
         this.rightBar.css("display", "none")
     }
 });
-//ASC
+//ASC TOC
 var TableOfContentElements = Class({
         create: function(b) {
             this._super(b);
             this.callBack = b;
             this.initElements();
+
             this.initEvent(b);
-            this.pickElements(b)
+            this.pickElements(b);
+            this.changeLanguage()
         },
+
+
         initElements: function() {
-            this.tableofcontentSwiper = $("<div class='stage'></div>");
-            this.tableofcontentSwiperList = $("<div class='swiper'></div>");
-            this.refreshSwiper(this.tableofcontentSwiperList, ols);
+
+                    this.searchButtonUrl =
+                        form_icons.search_form ? "data:image/png;base64," + form_icons.search_form : uiBaseURL + "search_form.png";
+                    this.input = $("<input class='input_search'></input>");
+                    this.searchButton = $("<img class='searchButton' src='" + this.searchButtonUrl + "'/>");
+                    this.tableofcontentSwiper = $("<div class='stage'></div>");
+                    this.tableofcontentSwiperList = $("<div class='swiper'></div>");
+                    this.refreshSwiper(this.tableofcontentSwiperList, ols);
+                    //if (selected_language()=='Arabic') this.refreshSwiper(this.tableofcontentSwiperList, ols);
+
+                    			// else if (selected_language()=='English') this.refreshSwiper(this.tableofcontentSwiperList, ols1);
 
 
-           //ASC test :      str = JSON.stringify(ols[0].children[0].caption);
-           //                    console.log(str);
+                    this.tableofcontentSwiper.append(this.tableofcontentSwiperList);
+                    isPhone() || isPad() ? this.tableofcontentSwiper.css({
+                        "overflow-y": "auto",
+                        "overflow-x": "hidden",
+                        "-webkit-overflow-scrolling": "touch"
+                    }) : (this.progress = $("<div class='progress'></div>"), this.progressBar = $("<div class='progressBar'></div>"), this.tableofcontentSwiper.append(this.progress), this.progress.append(this.progressBar), this.tableofcontentSwiper.scroll({}, Direction.top))
+                },
 
 
-            this.tableofcontentSwiper.append(this.tableofcontentSwiperList);
-            isPhone() || isPad() ? this.tableofcontentSwiper.css({
-                    "overflow-y": "auto",
-                    "overflow-x": "hidden",
-                    "-webkit-overflow-scrolling": "touch"
-                }) :
-                (this.progress = $("<div class='progress'></div>"), this.progressBar = $("<div class='progressBar'></div>"), this.tableofcontentSwiper.append(this.progress), this.progress.append(this.progressBar), this.tableofcontentSwiper.scroll({}, Direction.top))
-        },
+
+
         refreshSwiper: function(b, c) {
             for (var d = c.length, f = 0; f < d; f++) this.addItem(b, c[f])
         },
@@ -16533,8 +16595,11 @@ var TableOfContentElements = Class({
             b.progress = this.progress;
             b.progressBar = this.progressBar
         },
-        changeLanguage: function() {}
+        changeLanguage: function() {},
     }).extend(FormElements),
+
+
+    // ASC TOC
     TableOfContentItem = Class({
         create: function(b, c, d) {
             this.item = $("<div class='item'></div>");
@@ -16543,8 +16608,13 @@ var TableOfContentElements = Class({
             this.children = [];
             this.parent = b;
             this.parm = c;
-            this.parm.caption =
-                HTMLString.toText(this.parm.caption);
+
+            this.parm.caption = HTMLString.toText(this.parm.caption);
+          //  if (selected_language()=='English') this.parm.caption = HTMLString.toText(this.parm.caption_E);
+
+
+
+
             this.hasChild = c.children && 0 < c.children.length;
             this.expandUrl = form_icons.arrow ? "data:image/png;base64," + form_icons.arrow : uiBaseURL + "arrow.png";
             this.collapseUrl = rightToLeft ? form_icons.arrow3 ? "data:image/png;base64," + form_icons.arrow3 : uiBaseURL + "arrow3.png" : form_icons.arrow2 ? "data:image/png;base64," + form_icons.arrow2 : uiBaseURL + "arrow2.png";
@@ -16661,9 +16731,12 @@ var TableOfContentElements = Class({
     PhoneTableOfContentItem = Class({
         create: function(b, c, d) {
             c.fontColor = bookConfig.formFontColor ? bookConfig.formFontColor : bookConfig.iconColor;
+
+
             this._super(b, c, d)
         }
     }).extend(TableOfContentItem),
+
     PhoneTableOfContentForm = Class({
         create: function(b) {
             this.elements = new TableOfContentElements(this);
@@ -19591,6 +19664,7 @@ Class("ActionManager", {
         if (this.executor) return this.executor.execute(this.item, this.element, this.config)
     },
     getActionExecutor: function() {
+
         if (this.action.actionType == PageEditor.ActionType.GOTO_PAGE) return new PageItem.Action.GotoPageAction;
         if (this.action.actionType == PageEditor.ActionType.OPEN_URL) return new PageItem.Action.OpenUrlAction;
         if (this.action.actionType == PageEditor.ActionType.OPEN_WINDOW) return new PageItem.Action.OpenWindowAction;
@@ -19680,6 +19754,9 @@ Class("PlayVideoAction", {
         c.addClass("slider-action")
     }
 });
+
+// ASC to be modified to add image zooming
+
 Class("OpenSlideshowAction", {
     Package: "PageItem.Action",
     execute: function(b, c, d) {
@@ -19691,10 +19768,14 @@ Class("OpenSlideshowAction", {
         c.addClass("slider-action")
     }
 });
+
+// ASC javascript Action
+
 Class("ExecuteJavascriptAction", {
     Package: "PageItem.Action",
     execute: function(b, c, d) {
         b = d.action;
+
         b.scriptFun && eval(b.scriptFun);
         c.addClass("slider-action")
     }
@@ -27322,7 +27403,7 @@ Class("FlashSwf", {
                 "radio" == d || "checkbox" == d ? g.attr("checked", b(this).is(":checked")) : "text" == d ? g.attr("value", b(this).val()) : "select" == d ? b(this).find("option").each(function(c) {
                     b(this).is(":selected") && b("option", g).eq(c).attr("selected", !0)
                 }) : "textarea" == d && g.text(b(this).val())
-            });
+            }); console.log('getFormData'+d);
             return d
         },
         getPrintWindow: function() {
@@ -40248,9 +40329,9 @@ SlideBook.expand({
                             console.log('Soura'+currentSoura+',Hizb :'+hizbIndexOfCurrentPage);
 
 
-        					 if ((currentPage==487)||(currentPage==488)){_tipsBox2.setCaption("دعاء ختم القرآن") }
+        					 if ((currentPage==487)||(currentPage==488)||(currentPage==489)){_tipsBox2.setCaption("دعاء ختم القرآن") }
         					 else {
-        					 if (currentPage>=489 && currentPage<=541){_tipsBox2.setCaption("سور وآيات فاضلة")}
+        					 if (currentPage>=490 && currentPage<=542){_tipsBox2.setCaption("سور وآيات فاضلة")}
         					  else {
         					         switch (currentPage) {
                              					        case 1:
@@ -40259,6 +40340,17 @@ SlideBook.expand({
                                                         //case 2:
                                                          // _tipsBox2.setCaption("\t"+"سورة الفاتحة"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
                                                          // break;
+                                                         case 543:     _tipsBox2.setCaption("   "); break;
+                                                          case 544:    _tipsBox2.setCaption("   ");break;
+                                                            case 545:  _tipsBox2.setCaption("   ");break;
+                                                            case 546:  _tipsBox2.setCaption("   ");break;
+                                                            case 547:  _tipsBox2.setCaption("   ");break;
+                                                            case 548:  _tipsBox2.setCaption("   ");break;
+                                                            case 549:  _tipsBox2.setCaption("   ");break;
+                                                            case 550:  _tipsBox2.setCaption("   ");break;
+                                                            case 551:  _tipsBox2.setCaption("   ");break;
+                                                            case 552:  _tipsBox2.setCaption("   ");break;
+                                                            case 553:  _tipsBox2.setCaption("   ");break;
 
                                                         case 472:
                                                         _tipsBox2.setCaption("\t"+"سورة الإنفطار، المطففين"+"\t"+"-"+"\t" +" حزب"+"\t"+Math.floor(1+(currentPage-2)/8)+"\t"+"-"+"\t"+"صفحة"+"\t"+"\t"+BookInfo.getBook().getCurrentPageIndex()+"\t");
@@ -41449,7 +41541,7 @@ function initComponents() {
         bookConfig.TableOfContentButtonVisible && (global.frmTableOfContent = new PhoneTableOfContentForm({
             parent: tmpContainer,
             formType: "tableOfContent",
-            rightToLeft: rightToLeft
+            rightToLeft: rightToLeft,
         }));
         bookConfig.ShareButtonVisible && (global.sharePanel = new PhoneShareForm({
             parent: tmpContainer,
@@ -42706,8 +42798,7 @@ Class("ZoomButton", {
         var b = BookInfo.getBook().showPage;
         b.onDoubleTap.bind(b)({
             pointers: [{
-                pageX: windowWidth /
-                    2,
+                pageX: windowWidth /  2,
                 pageY: windowHeight / 2
             }]
         });

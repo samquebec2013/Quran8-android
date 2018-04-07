@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.quran8.app1"
     android:hardwareAccelerated="true"
-    android:versionCode="10000"
+    android:versionCode="1"
     android:versionName="1.0.0" >
 
     <uses-sdk
@@ -24,7 +24,8 @@
         android:hardwareAccelerated="true"
         android:icon="@mipmap/icon"
         android:label="Quran Athman"
-        android:supportsRtl="true" >
+        android:supportsRtl="true"
+        android:testOnly="true" >
         <activity
             android:name="com.quran8.app1.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"

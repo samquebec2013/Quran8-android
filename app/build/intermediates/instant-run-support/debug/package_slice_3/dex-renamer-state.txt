@@ -1,4 +1,4 @@
-#Sun Feb 11 20:36:59 EST 2018
-base.0=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\79
+#Thu Mar 22 16:00:59 EDT 2018
+base.0=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\60
 renamed.0=classes.dex
-file.0=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\79\\classes.dex
+file.0=C\:\\Users\\Sam\\testcordova\\Android_Quran\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\60\\classes.dex

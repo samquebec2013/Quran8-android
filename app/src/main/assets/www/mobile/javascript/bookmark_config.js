@@ -1,12 +1,21 @@
-﻿var ols = [
+﻿
+var ols = [
 
 {
-    caption: "فهرس السور\t",
+
+        caption: "فهرس السور\t",
+    	caption_E: "Table of Suwar\t",
+    	caption_A: "فهرس السور\t",
+
     page: "2",
     url: "",
     level: "0",
     children: [{
+
     caption: "الفاتحة",
+	caption_E: "Surah Fatiha\t",
+	caption_A: "الفاتحة",
+
     page: "2",
     url: "",
     level: "0",
@@ -1245,8 +1254,20 @@
     children: []
 }]
 },
-{caption:"سور وآيات فاضلة",page:"489",url:"",level:"1",children:[]},
-
+{caption:"سور وآيات فاضلة",page:"490",url:"",level:"1",children:[{
+                                                                     caption: "أحاديث نبوية وردت في فضلها ",
+                                                                     page: "544",
+                                                                     url: "",
+                                                                     level: "0",
+                                                                     children: []
+                                                                 }]},
+{caption:"يوم المؤمن وليلته",page:"545",url:"",level:"1",children:[{caption:"أذكار الصباح والمساء",page:"548",url:"",level:"1",children:[]},{caption:"أذكار النوم والإستيقاظ",page:"550",url:"",level:"1",children:[]}]},
 {caption:"دعاء ختم القرآن",page:"487",url:"",level:"1",children:[]},
+{caption:"أحكام التجويد",page:"553",url:"",level:"1",children:[]},
+
+
+
+{caption:"أعمالنا",page:"543",url:"",level:"1",children:[]}
+
 
 ];

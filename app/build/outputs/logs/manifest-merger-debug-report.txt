@@ -9,19 +9,19 @@ INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\m
 INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:1-14:12
 INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:1-14:12
 	package
-		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:102-127
+		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:98-123
 		INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:74-101
+		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:70-97
 		INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml
 	android:hardwareAccelerated
 		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:128-186
+		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:124-182
 	android:versionCode
-		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:46-73
+		ADDED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml:2:46-69
 		INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Sam\testcordova\Android_Quran\platforms\android\app\src\main\AndroidManifest.xml
 supports-screens
